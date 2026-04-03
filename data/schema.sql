@@ -51,10 +51,10 @@ COPY customers(customer_id, signup_date, segment)
 FROM 'customers.csv' DELIMITER ',' CSV HEADER;
 
 COPY products(product_id, name, category, unit_price)
-FROM 'products.csv' DELIMITER ',' CSV HEADER;
+FROM 'data/products.csv' DELIMITER ',' CSV HEADER;
 
 COPY orders(order_id, customer_id, order_date, status)
-FROM 'orders.csv' DELIMITER ',' CSV HEADER;
+FROM 'data/orders.csv' DELIMITER ',' CSV HEADER;
 
 COPY order_items(order_item_id, order_id, product_id, quantity, unit_price)
-FROM 'order_items.csv' DELIMITER ',' CSV HEADER;
+FROM 'data/order_items.csv' DELIMITER ',' CSV HEADER;
